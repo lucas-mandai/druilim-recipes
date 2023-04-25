@@ -7,6 +7,7 @@ export const HeaderContainer = styled('header', {
   padding: '1rem 2.5rem',
   boxShadow: '2px 2px 2px rgb(0, 0, 0 , 0.1)',
   marginBottom: '2rem',
+  backgroundColor: 'rgb(255, 255, 255)',
 
   input: {
     // height: '2.25rem',
@@ -23,8 +24,13 @@ export const HeaderContainer = styled('header', {
     padding: '0.5rem 1rem',
     border: '1px solid $blueTheme',
     outline: 'none',
-    color: '$blueTheme',
+    color: 'white',
     borderLeft: 'none',
+    background: '$blueTheme',
+
+    '&:hover': {
+      filter: 'contrast(0.9)',
+    },
   },
 })
 

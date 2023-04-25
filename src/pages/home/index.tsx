@@ -1,5 +1,7 @@
 import Head from 'next/head'
-import { DefaultContainer } from './styles'
+import { DefaultContainer, MenuContainer, MenuItem } from './styles'
+import { FaHamburger } from 'react-icons/fa'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -8,7 +10,29 @@ export default function Home() {
         <title>Drulim | Receitas</title>
       </Head>
       <DefaultContainer>
-        <h1>Hello World</h1>
+        <MenuContainer>
+          <Link href={'/'}>
+            <MenuItem>
+              <FaHamburger size={24} />
+            </MenuItem>
+            <p>Lanches</p>
+          </Link>
+          <MenuItem>
+            <FaHamburger size={24} />
+          </MenuItem>
+          <MenuItem>
+            <FaHamburger size={24} />
+          </MenuItem>
+          <MenuItem>
+            <FaHamburger size={24} />
+          </MenuItem>
+          <MenuItem>
+            <FaHamburger size={24} />
+          </MenuItem>
+          <MenuItem>
+            <FaHamburger size={24} />
+          </MenuItem>
+        </MenuContainer>
       </DefaultContainer>
     </>
   )

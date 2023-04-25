@@ -9,6 +9,7 @@ export const globalStyles = globalCss({
 
   body: {
     '-webkit-font-smoothing': 'antialiased',
+    background: '#F0F0F0',
   },
 
   'body, input, select, textarea, button': {
@@ -19,6 +20,7 @@ export const globalStyles = globalCss({
 
   a: {
     color: 'inherit',
+    textDecoration: 'none',
   },
 
   button: {
