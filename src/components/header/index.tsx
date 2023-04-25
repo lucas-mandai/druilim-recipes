@@ -1,18 +1,30 @@
 import Image from 'next/image'
 import logoDrulim from '../../assets/drulimLogo.png'
-import { HeaderContainer, InputContainer } from './styles'
-// import { MagnifyingGlass } from 'phosphor-react'
+import {
+  AvatarContainer,
+  HeaderContainer,
+  InputSearchContainer,
+} from './styles'
+import { MagnifyingGlass } from 'phosphor-react'
 
 export default function Header() {
   return (
     <HeaderContainer>
-      <Image src={logoDrulim} height={30} alt="" placeholder="blur" />
-      <InputContainer>
-        <input type="text" placeholder="Pesquisar" />
-        <button type="submit">Pesquisar</button>
-        {/* <MagnifyingGlass size={22} /> */}
-      </InputContainer>
-      <div>Avatar</div>
+      <Image src={logoDrulim} height={24} alt="" placeholder="blur" />
+      <InputSearchContainer>
+        <input type="search" placeholder="Procure uma receita" />
+        <button type="submit">
+          <MagnifyingGlass size={14} />
+        </button>
+      </InputSearchContainer>
+      <AvatarContainer>
+        <Image
+          src="https://github.com/lucas-mandai.png"
+          width={36}
+          height={36}
+          alt=""
+        ></Image>
+      </AvatarContainer>
     </HeaderContainer>
   )
 }

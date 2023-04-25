@@ -1,12 +1,15 @@
 import Head from 'next/head'
+import { DefaultContainer } from './styles'
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Drulim | Recipes</title>
+        <title>Drulim | Receitas</title>
       </Head>
-      <h1>Hello World</h1>
+      <DefaultContainer>
+        <h1>Hello World</h1>
+      </DefaultContainer>
     </>
   )
 }
