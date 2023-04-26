@@ -6,12 +6,28 @@ export const DefaultContainer = styled('div', {
   padding: '15px',
 })
 
-export const MenuContainer = styled('div', {
-  display: 'flex',
-  justifyContent: 'space-around',
+// export const MenuContainer = styled('div', {
+//   display: 'flex',
+//   justifyContent: 'space-around',
 
-  a: {
-    textAlign: 'center',
+//   a: {
+//     textAlign: 'center',
+//   },
+// })
+
+export const MenuContainer = styled('div', {
+  // '.swiper-wrapper': {
+  //   justifyContent: 'space-around',
+  // },
+  '.swiper-slide': {
+    '.sld': {
+      textAlign: 'center',
+      fontSize: '18px',
+      background: '#fff',
+      width: '60px!important',
+      height: '60px',
+      borderRadius: '50%',
+    },
   },
 })
 

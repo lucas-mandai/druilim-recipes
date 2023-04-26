@@ -22,6 +22,14 @@ import {
 
 import Link from 'next/link'
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react'
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/pagination'
+// import required modules
+import { Pagination } from 'swiper'
+
 export default function Home() {
   return (
     <>
@@ -30,6 +38,50 @@ export default function Home() {
       </Head>
       <DefaultContainer>
         <MenuContainer>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={10}
+            pagination={{
+              clickable: true,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+              },
+              1024: {
+                slidesPerView: 6,
+                spaceBetween: 10,
+              },
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <div className="sld">Slide1</div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="sld">Slide2</div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="sld">Slide3</div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="sld">Slide4</div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="sld">Slide5</div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="sld">Slide6</div>
+            </SwiperSlide>
+          </Swiper>
+        </MenuContainer>
+        {/* <MenuContainer>
           <Link href={'/'}>
             <MenuItem>
               <GiBeerStein size={24} />
@@ -66,7 +118,7 @@ export default function Home() {
             </MenuItem>
             <p>Doces</p>
           </Link>
-        </MenuContainer>
+        </MenuContainer> */}
 
         <HighlightsContainer>
           <div className="mainItem">
