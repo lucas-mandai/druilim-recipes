@@ -9,6 +9,10 @@ export const DefaultContainer = styled('div', {
 export const MenuContainer = styled('div', {
   display: 'flex',
   justifyContent: 'space-around',
+
+  a: {
+    textAlign: 'center',
+  },
 })
 
 export const MenuItem = styled('div', {
@@ -40,6 +44,8 @@ export const HighlightsContainer = styled('section', {
     minWidth: '40rem',
     height: '400px',
     position: 'relative',
+    borderRadius: '8px',
+    boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.2)',
 
     img: {
       borderRadius: '8px',
@@ -63,14 +69,26 @@ export const HighlightsContainer = styled('section', {
 
   '.secondaryItemContainer': {
     minWidth: '20rem',
-    border: '1px solid $blueTheme',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    gap: '2.6rem',
 
     '.secondaryItem': {
-      width: '100%',
-      height: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
+      height: '10rem',
+      borderRadius: '8px',
+      boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.2)',
+
+      img: {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        filter: 'contrast(0.8)',
+        borderRadius: '8px',
+      },
+      span: {
+        fontWeight: 'bold',
+      },
     },
   },
 })

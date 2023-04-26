@@ -1,13 +1,25 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import boloCenoura from '../../assets/recipes/boloLaranja.jpg'
+import pizza from '../../assets/recipes/pizza.jpg'
+import macarrao from '../../assets/recipes/macarrao.jpg'
 import {
   DefaultContainer,
   HighlightsContainer,
   MenuContainer,
   MenuItem,
 } from './styles'
-import { FaHamburger } from 'react-icons/fa'
+
+// Game Icons
+import {
+  GiCupcake,
+  GiBeerStein,
+  GiHamburger,
+  GiSaucepan,
+  GiHotMeal,
+  GiNoodles,
+} from 'react-icons/gi'
+
 import Link from 'next/link'
 
 export default function Home() {
@@ -20,56 +32,62 @@ export default function Home() {
         <MenuContainer>
           <Link href={'/'}>
             <MenuItem>
-              <FaHamburger size={24} />
+              <GiBeerStein size={24} />
             </MenuItem>
             <p>Bebidas</p>
           </Link>
           <Link href={'/'}>
             <MenuItem>
-              <FaHamburger size={24} />
+              <GiHamburger size={24} />
             </MenuItem>
             <p>Lanches</p>
           </Link>
           <Link href={'/'}>
             <MenuItem>
-              <FaHamburger size={24} />
+              <GiSaucepan size={24} />
             </MenuItem>
-            <p>Lanches</p>
+            <p>Molhos</p>
           </Link>
           <Link href={'/'}>
             <MenuItem>
-              <FaHamburger size={24} />
+              <GiNoodles size={24} />
             </MenuItem>
-            <p>Lanches</p>
+            <p>Massas</p>
           </Link>
           <Link href={'/'}>
             <MenuItem>
-              <FaHamburger size={24} />
+              <GiHotMeal size={24} />
             </MenuItem>
-            <p>Lanches</p>
+            <p>Entradas</p>
           </Link>
           <Link href={'/'}>
             <MenuItem>
-              <FaHamburger size={24} />
+              <GiCupcake size={24} />
             </MenuItem>
-            <p>Lanches</p>
+            <p>Doces</p>
           </Link>
         </MenuContainer>
 
         <HighlightsContainer>
           <div className="mainItem">
-            <Link href="">
+            <Link href="recipe">
               <Image src={boloCenoura} alt="" placeholder="blur"></Image>
               <span>Bolo de Cenoura</span>
             </Link>
           </div>
           <div className="secondaryItemContainer">
-            <div className="secondaryItem">
-              <Image src="" alt=""></Image>
-            </div>
-            <div className="secondaryItem">
-              <Image src="" alt=""></Image>
-            </div>
+            <Link href="recipe">
+              <div className="secondaryItem">
+                <Image src={pizza} alt="" placeholder="blur"></Image>
+                <span>Massa de Pizza</span>
+              </div>
+            </Link>
+            <Link href="recipe">
+              <div className="secondaryItem">
+                <Image src={macarrao} alt="" placeholder="blur"></Image>
+                <span>Macarronada Suculenta</span>
+              </div>
+            </Link>
           </div>
         </HighlightsContainer>
       </DefaultContainer>
