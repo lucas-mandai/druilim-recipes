@@ -82,8 +82,8 @@ export const HighlightsContainer = styled('section', {
   justifyContent: 'center',
 
   '.mainItem': {
-    width: '60%',
-    height: 'auto',
+    width: '65%',
+    height: '24rem',
     position: 'relative',
     borderRadius: '8px',
     boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.2)',
@@ -113,33 +113,39 @@ export const HighlightsContainer = styled('section', {
   },
 
   '.secondaryItemContainer': {
-    width: 'calc(40% - 3rem)',
+    width: 'calc(35% - 3rem)',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
 
     '@media (max-width: 768px)': {
       width: '100%',
       flexDirection: 'row',
+      gap: '1rem',
     },
 
     '.secondaryItem': {
       width: '100%',
+      height: '200px',
       borderRadius: '8px',
-      boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.2)',
+      position: 'relative',
 
       '@media (max-width: 768px)': {
-        width: '50%',
+        height: '170px',
       },
 
       img: {
         width: '100%',
-        height: '100%',
+        height: '80%',
         objectFit: 'cover',
         filter: 'contrast(0.8)',
         borderRadius: '8px',
+        boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.2)',
       },
-      span: {
+
+      div: {
+        display: 'flex',
+        position: 'absolute',
         fontWeight: 'bold',
       },
     },

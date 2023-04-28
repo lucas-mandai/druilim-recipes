@@ -5,12 +5,20 @@ import {
   AvatarContainer,
   HeaderContainer,
   InputSearchContainer,
+  SearchContainerMobile,
 } from './styles'
 import { MagnifyingGlass } from 'phosphor-react'
+import { BiSearchAlt } from 'react-icons/bi'
 
 export default function Header() {
   return (
     <HeaderContainer>
+      <SearchContainerMobile>
+        <input type="text" placeholder="Pesquisar" />
+      </SearchContainerMobile>
+      <button className="searchButtonMobile">
+        <BiSearchAlt size={24} />
+      </button>
       <Link href="/">
         <Image src={logoDrulim} height={24} alt="" placeholder="blur" />
       </Link>

@@ -9,6 +9,38 @@ export const HeaderContainer = styled('header', {
   marginBottom: '2rem',
   backgroundColor: 'rgb(255, 255, 255)',
 
+  '.searchButtonMobile': {
+    display: 'none',
+    border: 'none',
+    background: 'white',
+    width: '38px',
+    height: '38px',
+    borderRadius: '50%',
+    boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.2)',
+    color: '$blueTheme',
+    fontSize: '1.2rem',
+    fontWeight: 'bold',
+
+    '@media (max-width: 768px)': {
+      display: 'block',
+    },
+  },
+})
+
+export const SearchContainerMobile = styled('div', {
+  zIndex: '99999',
+  position: 'absolute',
+  left: '0',
+  top: '70px',
+  height: '60px',
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  background: 'red',
+})
+
+export const InputSearchContainer = styled('form', {
   input: {
     // height: '2.25rem',
     borderRadius: '25px 0 0 25px',
@@ -32,10 +64,10 @@ export const HeaderContainer = styled('header', {
       filter: 'contrast(0.9)',
     },
   },
-})
 
-export const InputSearchContainer = styled('form', {
-  svg: {},
+  '@media (max-width: 768px)': {
+    display: 'none',
+  },
 })
 
 export const AvatarContainer = styled('div', {

@@ -118,44 +118,6 @@ export default function Home() {
             </SwiperSlide>
           </Swiper>
         </MenuContainer>
-        {/* <MenuContainer>
-          <Link href={'/'}>
-            <MenuItem>
-              <GiBeerStein size={24} />
-            </MenuItem>
-            <p>Bebidas</p>
-          </Link>
-          <Link href={'/'}>
-            <MenuItem>
-              <GiHamburger size={24} />
-            </MenuItem>
-            <p>Lanches</p>
-          </Link>
-          <Link href={'/'}>
-            <MenuItem>
-              <GiSaucepan size={24} />
-            </MenuItem>
-            <p>Molhos</p>
-          </Link>
-          <Link href={'/'}>
-            <MenuItem>
-              <GiNoodles size={24} />
-            </MenuItem>
-            <p>Massas</p>
-          </Link>
-          <Link href={'/'}>
-            <MenuItem>
-              <GiHotMeal size={24} />
-            </MenuItem>
-            <p>Entradas</p>
-          </Link>
-          <Link href={'/'}>
-            <MenuItem>
-              <GiCupcake size={24} />
-            </MenuItem>
-            <p>Doces</p>
-          </Link>
-        </MenuContainer> */}
 
         <HighlightsContainer>
           <div className="mainItem">
@@ -168,13 +130,13 @@ export default function Home() {
             <Link href="recipe">
               <div className="secondaryItem">
                 <Image src={pizza} alt="" placeholder="blur"></Image>
-                <span>Massa de Pizza</span>
+                <div>Massa de Pizza</div>
               </div>
             </Link>
             <Link href="recipe">
               <div className="secondaryItem">
                 <Image src={macarrao} alt="" placeholder="blur"></Image>
-                <span>Macarronada Suculenta</span>
+                <div>Macarronada Suculenta</div>
               </div>
             </Link>
           </div>
