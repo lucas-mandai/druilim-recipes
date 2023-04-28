@@ -7,7 +7,7 @@ import {
   DefaultContainer,
   HighlightsContainer,
   MenuContainer,
-  MenuItem,
+  // MenuItem,
 } from './styles'
 
 // Game Icons
@@ -27,8 +27,9 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 // Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 // import required modules
-import { Pagination } from 'swiper'
+import { Autoplay, Pagination, Navigation } from 'swiper'
 
 export default function Home() {
   return (
@@ -44,6 +45,12 @@ export default function Home() {
             pagination={{
               clickable: true,
             }}
+            loop={true}
+            navigation={false}
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: false,
+            }}
             breakpoints={{
               640: {
                 slidesPerView: 3,
@@ -58,26 +65,56 @@ export default function Home() {
                 spaceBetween: 10,
               },
             }}
-            modules={[Pagination]}
+            modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
           >
             <SwiperSlide>
-              <div className="sld">Slide1</div>
+              <Link href="/">
+                <div className="sld">
+                  <GiBeerStein size={30} />
+                  <p>Bebidas</p>
+                </div>
+              </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="sld">Slide2</div>
+              <Link href="/">
+                <div className="sld">
+                  <GiHamburger size={30} />
+                  <p>Hamburger</p>
+                </div>
+              </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="sld">Slide3</div>
+              <Link href="/">
+                <div className="sld">
+                  <GiSaucepan size={30} />
+                  <p>Molhos</p>
+                </div>
+              </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="sld">Slide4</div>
+              <Link href="/">
+                <div className="sld">
+                  <GiNoodles size={30} />
+                  <p>Massas</p>
+                </div>
+              </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="sld">Slide5</div>
+              <Link href="/">
+                <div className="sld">
+                  <GiHotMeal size={30} />
+                  <p>Entradas</p>
+                </div>
+              </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="sld">Slide6</div>
+              <Link href="/">
+                <div className="sld">
+                  <GiCupcake size={30} />
+                  <p>Doces</p>
+                </div>
+              </Link>
             </SwiperSlide>
           </Swiper>
         </MenuContainer>

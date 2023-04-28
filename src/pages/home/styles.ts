@@ -16,17 +16,43 @@ export const DefaultContainer = styled('div', {
 // })
 
 export const MenuContainer = styled('div', {
+  marginBottom: '2.5rem',
   // '.swiper-wrapper': {
   //   justifyContent: 'space-around',
   // },
+  '.swiper': {
+    height: '120px',
+  },
+
   '.swiper-slide': {
+    display: 'flex',
+    justifyContent: 'space-around',
+
     '.sld': {
+      position: 'relative',
       textAlign: 'center',
       fontSize: '18px',
       background: '#fff',
       width: '60px!important',
       height: '60px',
       borderRadius: '50%',
+      color: '$blueTheme',
+      boxShadow: '2px 2px 2px rgba(0, 0, 0, 0.2)',
+
+      svg: {
+        position: 'absolute',
+        left: '50%' /* centraliza horizontalmente */,
+        top: '50%' /* centraliza verticalmente */,
+        transform: 'translate(-50%, -50%)',
+      },
+      p: {
+        textAlign: 'center',
+        position: 'absolute',
+        bottom: '0',
+        left: '50%',
+        marginBottom: '-28px',
+        transform: 'translate(-50%)',
+      },
     },
   },
 })
@@ -49,19 +75,22 @@ export const MenuItem = styled('div', {
 
 export const HighlightsContainer = styled('section', {
   display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
   gap: '3rem',
   width: '100%',
   height: '100%',
-  marginTop: '2.5rem',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
 
   '.mainItem': {
-    minWidth: '40rem',
-    height: '400px',
+    width: '60%',
+    height: 'auto',
     position: 'relative',
     borderRadius: '8px',
     boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.2)',
+
+    '@media (max-width: 768px)': {
+      width: '100%',
+    },
 
     img: {
       borderRadius: '8px',
@@ -84,16 +113,24 @@ export const HighlightsContainer = styled('section', {
   },
 
   '.secondaryItemContainer': {
-    minWidth: '20rem',
+    width: 'calc(40% - 3rem)',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
-    gap: '2.6rem',
+    justifyContent: 'space-around',
+
+    '@media (max-width: 768px)': {
+      width: '100%',
+      flexDirection: 'row',
+    },
 
     '.secondaryItem': {
-      height: '10rem',
+      width: '100%',
       borderRadius: '8px',
       boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.2)',
+
+      '@media (max-width: 768px)': {
+        width: '50%',
+      },
 
       img: {
         width: '100%',

@@ -24,5 +24,12 @@ export const {
       lg: '1.25px',
       xl: '1.5px',
     },
+
+    // media: {
+    //   bpsm: '@media screen and (min-width: 640px)',
+    //   bpmd: '@media screen and (min-width: 768px)',
+    //   bplg: '@media screen and (min-width: 1024px)',
+    //   bpxl: '@media screen and (min-width: 1600px)',
+    // },
   },
 })
