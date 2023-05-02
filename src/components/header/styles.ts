@@ -51,7 +51,7 @@ export const SearchContainerMobile = styled('div', {
     padding: '0.5rem 1rem',
     border: '1px solid $blueTheme',
     outline: 'none',
-    color: '$blueTheme',
+    color: '$gray',
     fontSize: '$sm',
   },
   button: {

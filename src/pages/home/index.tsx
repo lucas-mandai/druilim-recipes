@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import boloCenoura from '../../assets/recipes/boloLaranja.jpg'
 import pizza from '../../assets/recipes/pizza.jpg'
 import macarrao from '../../assets/recipes/macarrao.jpg'
+import arrozBrocolis from '../../assets/recipes/arrozBrocolis.jpeg'
 import {
   DefaultContainer,
   HighlightsContainer,
@@ -122,8 +122,9 @@ export default function Home() {
         <HighlightsContainer>
           <div className="mainItem">
             <Link href="recipe">
-              <Image src={boloCenoura} alt="" placeholder="blur"></Image>
-              <span>Bolo de Cenoura</span>
+              <Image src={arrozBrocolis} alt="" placeholder="blur"></Image>
+
+              <span>Arroz com Brocolis</span>
             </Link>
           </div>
           <div className="secondaryItemContainer">
