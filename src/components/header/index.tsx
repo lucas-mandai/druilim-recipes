@@ -7,16 +7,29 @@ import {
   InputSearchContainer,
   SearchContainerMobile,
 } from './styles'
-import { MagnifyingGlass } from 'phosphor-react'
+
 import { BiSearchAlt } from 'react-icons/bi'
+import { useState } from 'react'
 
 export default function Header() {
+  const [showSearchContainerMobile, setShowSearchContainerMobile] =
+    useState(false)
+
+  function handleClick() {
+    setShowSearchContainerMobile(!showSearchContainerMobile)
+  }
+
   return (
     <HeaderContainer>
-      <SearchContainerMobile>
-        <input type="text" placeholder="Pesquisar" />
-      </SearchContainerMobile>
-      <button className="searchButtonMobile">
+      {showSearchContainerMobile && (
+        <SearchContainerMobile>
+          <input type="text" placeholder="Pesquisar" />
+          <button type="submit">
+            <BiSearchAlt size={14} />
+          </button>
+        </SearchContainerMobile>
+      )}
+      <button onClick={handleClick} className="searchButtonMobile">
         <BiSearchAlt size={24} />
       </button>
       <Link href="/">
@@ -25,7 +38,7 @@ export default function Header() {
       <InputSearchContainer>
         <input type="search" placeholder="Procure uma receita" />
         <button type="submit">
-          <MagnifyingGlass size={14} />
+          <BiSearchAlt size={14} />
         </button>
       </InputSearchContainer>
       <AvatarContainer>

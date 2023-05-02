@@ -28,16 +28,46 @@ export const HeaderContainer = styled('header', {
 })
 
 export const SearchContainerMobile = styled('div', {
-  zIndex: '99999',
+  display: 'none',
+  zIndex: '999',
   position: 'absolute',
   left: '0',
   top: '70px',
   height: '60px',
   width: '100%',
-  display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  background: 'red',
+  background: '#f0f0f0',
+  boxShadow: '2px 2px 2px rgb(0, 0, 0 , 0.1)',
+
+  '@media (max-width: 768px)': {
+    display: 'flex',
+    // display: 'none',
+  },
+
+  input: {
+    // height: '2.25rem',
+    borderRadius: '25px 0 0 25px',
+    padding: '0.5rem 1rem',
+    border: '1px solid $blueTheme',
+    outline: 'none',
+    color: '$blueTheme',
+    fontSize: '$sm',
+  },
+  button: {
+    // height: '2.25rem',
+    borderRadius: '0 25px 25px 0',
+    padding: '0.5rem 1rem',
+    border: '1px solid $blueTheme',
+    outline: 'none',
+    color: 'white',
+    borderLeft: 'none',
+    background: '$blueTheme',
+
+    '&:hover': {
+      filter: 'contrast(0.9)',
+    },
+  },
 })
 
 export const InputSearchContainer = styled('form', {
