@@ -7,6 +7,8 @@ import {
   DefaultContainer,
   HighlightsContainer,
   MenuContainer,
+  RecentRecipes,
+  Separator,
   // MenuItem,
 } from './styles'
 
@@ -142,6 +144,68 @@ export default function Home() {
             </Link>
           </div>
         </HighlightsContainer>
+        <Separator>
+          <button>Receitas Recentes</button>
+        </Separator>
+        <RecentRecipes>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={10}
+            pagination={{
+              clickable: true,
+            }}
+            loop={true}
+            navigation={false}
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 10,
+              },
+              1024: {
+                slidesPerView: 6,
+                spaceBetween: 10,
+              },
+            }}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiperSecond"
+          >
+            <SwiperSlide>
+              {/* <Image
+                  src="https://www.foodiesfeed.com/wp-content/uploads/2015/09/sushi-yam-california-rolls.jpg"
+                  fill
+                  object-fit="cover"
+                  alt={''}
+                ></Image> */}
+              <span>Sushi</span>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src="https://www.foodiesfeed.com/wp-content/uploads/2015/09/sushi-yam-california-rolls.jpg"
+                fill
+                object-fit="cover"
+                alt={''}
+              ></Image>
+              <span>Sushi</span>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src="https://www.foodiesfeed.com/wp-content/uploads/2015/09/sushi-yam-california-rolls.jpg"
+                fill
+                object-fit="cover"
+                alt={''}
+              ></Image>
+              <span>Sushi</span>
+            </SwiperSlide>
+          </Swiper>
+        </RecentRecipes>
       </DefaultContainer>
     </>
   )

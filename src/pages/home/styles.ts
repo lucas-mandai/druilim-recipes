@@ -170,3 +170,43 @@ export const HighlightsContainer = styled('section', {
     },
   },
 })
+
+export const Separator = styled('div', {
+  display: 'flex',
+  position: 'relative',
+  textAlign: 'center',
+  margin: '2rem 0',
+
+  '::before': {
+    width: 'absolute',
+    content: '',
+    alignSelf: 'center',
+    height: '1rem',
+    backgroundColor: '#d8d8d8',
+  },
+})
+
+export const RecentRecipes = styled('section', {
+  position: 'relative',
+  display: 'flex',
+  gap: '3rem',
+  flexWrap: 'wrap',
+
+  div: {
+    height: '11.25rem',
+    position: 'relative',
+    borderRadius: '8px',
+    flex: '1',
+    minWidth: '100px',
+    boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.2)',
+  },
+
+  img: {
+    borderRadius: '8px',
+  },
+  span: {
+    position: 'absolute',
+    color: '$white',
+    zIndex: 999,
+  },
+})
