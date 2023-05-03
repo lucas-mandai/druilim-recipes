@@ -17,7 +17,7 @@ export const DefaultContainer = styled('div', {
 
 export const MenuContainer = styled('div', {
   marginTop: '5rem',
-  marginBottom: '2.5rem',
+  marginBottom: '1rem',
   // '.swiper-wrapper': {
   //   justifyContent: 'space-around',
   // },
