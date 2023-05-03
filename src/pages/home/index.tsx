@@ -8,7 +8,7 @@ import {
   HighlightsContainer,
   MenuContainer,
   RecentRecipes,
-  Separator,
+  SectionTitle,
   // MenuItem,
 } from './styles'
 
@@ -144,33 +144,33 @@ export default function Home() {
             </Link>
           </div>
         </HighlightsContainer>
-        <Separator>
-          <button>Receitas Recentes</button>
-        </Separator>
+
+        <SectionTitle>Últimas Receitas</SectionTitle>
+
         <RecentRecipes>
           <Swiper
-            slidesPerView={3}
+            slidesPerView={2}
             spaceBetween={10}
-            pagination={{
-              clickable: true,
-            }}
+            // pagination={{
+            //   clickable: true,
+            // }}
             loop={true}
-            navigation={false}
-            autoplay={{
-              delay: 1500,
-              disableOnInteraction: false,
-            }}
+            navigation={true}
+            // autoplay={{
+            //   delay: 3000,
+            //   disableOnInteraction: false,
+            // }}
             breakpoints={{
               640: {
-                slidesPerView: 3,
+                slidesPerView: 1,
                 spaceBetween: 10,
               },
               768: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 10,
               },
               1024: {
-                slidesPerView: 6,
+                slidesPerView: 3,
                 spaceBetween: 10,
               },
             }}
@@ -178,31 +178,56 @@ export default function Home() {
             className="mySwiperSecond"
           >
             <SwiperSlide>
-              {/* <Image
-                  src="https://www.foodiesfeed.com/wp-content/uploads/2015/09/sushi-yam-california-rolls.jpg"
-                  fill
-                  object-fit="cover"
-                  alt={''}
-                ></Image> */}
-              <span>Sushi</span>
-            </SwiperSlide>
-            <SwiperSlide>
               <Image
                 src="https://www.foodiesfeed.com/wp-content/uploads/2015/09/sushi-yam-california-rolls.jpg"
                 fill
-                object-fit="cover"
                 alt={''}
               ></Image>
-              <span>Sushi</span>
+              <span className="title">Macksushi Filadelfia</span>
             </SwiperSlide>
             <SwiperSlide>
               <Image
-                src="https://www.foodiesfeed.com/wp-content/uploads/2015/09/sushi-yam-california-rolls.jpg"
+                src="https://www.foodiesfeed.com/wp-content/uploads/2019/07/cinnamon-and-maple-syrup-cake.jpg"
                 fill
-                object-fit="cover"
                 alt={''}
               ></Image>
-              <span>Sushi</span>
+              <span className="title">Bolo com Aveia e Passas</span>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src="https://www.foodiesfeed.com/wp-content/uploads/2019/01/orange-cheese-pancakes.jpg"
+                fill
+                alt={''}
+              ></Image>
+              <span className="title">Panquecas De Queijo De Laranja</span>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src="https://www.foodiesfeed.com/wp-content/uploads/2019/01/banana-oat-chocolate-cookies.jpg"
+                fill
+                alt={''}
+              ></Image>
+              <span className="title">
+                Cookies de banana e aveia com chocolate
+              </span>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src="https://www.foodiesfeed.com/wp-content/uploads/2016/05/orange-juice-drink-with-mint.jpg"
+                fill
+                alt={''}
+              ></Image>
+              <span className="title">
+                Bebida de suco de laranja com hortelã
+              </span>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src="https://www.foodiesfeed.com/wp-content/uploads/2019/01/apple-pie.jpg"
+                fill
+                alt={''}
+              ></Image>
+              <span className="title">Torta de maçã caseira</span>
             </SwiperSlide>
           </Swiper>
         </RecentRecipes>

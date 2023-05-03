@@ -171,19 +171,16 @@ export const HighlightsContainer = styled('section', {
   },
 })
 
-export const Separator = styled('div', {
+export const SectionTitle = styled('div', {
   display: 'flex',
   position: 'relative',
   textAlign: 'center',
   margin: '2rem 0',
-
-  '::before': {
-    width: 'absolute',
-    content: '',
-    alignSelf: 'center',
-    height: '1rem',
-    backgroundColor: '#d8d8d8',
-  },
+  justifyContent: 'center',
+  fontSize: '1.8rem',
+  fontWeight: 'bold',
+  color: '$blueTheme',
+  textTransform: 'uppercase',
 })
 
 export const RecentRecipes = styled('section', {
@@ -192,21 +189,51 @@ export const RecentRecipes = styled('section', {
   gap: '3rem',
   flexWrap: 'wrap',
 
-  div: {
+  // div: {
+  //   height: '11.25rem',
+  //   position: 'relative',
+  //   borderRadius: '8px',
+  //   flex: '1',
+  //   minWidth: '100px',
+  //   boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.2)',
+  // },
+  '.swiper-slide': {
     height: '11.25rem',
     position: 'relative',
     borderRadius: '8px',
-    flex: '1',
-    minWidth: '100px',
-    boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.2)',
   },
-
+  '.swiper-button-prev::after': {
+    background: '$blueTheme',
+    color: '$white',
+    fontSize: '1rem',
+    borderRadius: '50%',
+    padding: '0.6rem 0.8rem',
+  },
+  '.swiper-button-next::after': {
+    background: '$blueTheme',
+    color: '$white',
+    fontSize: '1rem',
+    borderRadius: '50%',
+    padding: '0.6rem 0.8rem',
+  },
   img: {
+    objectFit: 'cover',
     borderRadius: '8px',
   },
-  span: {
-    position: 'absolute',
+
+  '.title': {
+    borderRadius: '0 0 8px 8px',
+    position: 'relative',
+    transform: 'translateY(350%)',
     color: '$white',
     zIndex: 999,
+    width: '100%',
+    height: '40px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize: '1rem',
+    background:
+      'linear-gradient(to top, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0) 100%)',
   },
 })
