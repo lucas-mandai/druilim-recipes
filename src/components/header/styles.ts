@@ -1,6 +1,9 @@
 import { styled } from '@/styles'
 
 export const HeaderContainer = styled('header', {
+  zIndex: '9999999',
+  width: '100%',
+  position: 'fixed',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
