@@ -70,7 +70,7 @@ export default function Recipe() {
             <li>Coloque no fogo por 10 minutos, até que a água quase seque.</li>
             <li>
               Desligue o fogo e aguarde mais 10 minutos. O arroz ficará
-              soltinho.A
+              soltinho.
             </li>
           </ol>
         </Preparation>
