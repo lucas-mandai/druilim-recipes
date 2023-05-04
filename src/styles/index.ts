@@ -13,7 +13,7 @@ export const {
   theme: {
     colors: {
       white: '#ffffff',
-
+      bg: '#F0F0F0',
       gray: '#303030',
       blueTheme: '#1498D5',
     },

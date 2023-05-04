@@ -17,11 +17,10 @@ export default function App({ Component, pageProps }: MyAppProps) {
   const { isLoginPage } = pageProps
   return (
     <>
-      {!isLoginPage && <Header />}{' '}
       {/* Renderiza o header apenas se a página atual não for a de login */}
-      {/* <Header /> */}
+      {!isLoginPage && <Header />}
       <Component {...pageProps} />
-      <Footer />
+      {!isLoginPage && <Footer />}
     </>
   )
 }

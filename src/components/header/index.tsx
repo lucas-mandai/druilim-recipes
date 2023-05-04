@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logoDrulim from '../../assets/drulimLogo.png'
+import logoDrulim from '../../assets/drulim_logo.png'
 import Link from 'next/link'
 import {
   AvatarContainer,

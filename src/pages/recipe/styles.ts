@@ -136,6 +136,6 @@ export const Preparation = styled('div', {
     borderRadius: '50%',
     position: 'absolute',
     left: '-0.5em',
-    top: '0',
+    top: '5px',
   },
 })
