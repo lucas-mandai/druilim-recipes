@@ -13,7 +13,7 @@ export const globalStyles = globalCss({
   },
 
   'body, input, select, textarea, button': {
-    fontFamily: 'Roboto',
+    fontFamily: 'Poppins',
     fontWeight: 400,
     fontSize: '1rem',
     color: '#3c3c3c',

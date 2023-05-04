@@ -68,7 +68,7 @@ export const RecipeContainer = styled('div', {
 })
 
 export const Ingredients = styled('div', {
-  margin: '1rem',
+  marginTop: '2rem',
   alignSelf: 'self-start',
 
   ul: {
@@ -95,7 +95,7 @@ export const Ingredients = styled('div', {
     borderRadius: '50%',
     position: 'absolute',
     left: '-0.5em',
-    top: '5px',
+    top: '10px',
   },
 
   h2: {
@@ -104,7 +104,7 @@ export const Ingredients = styled('div', {
 })
 
 export const Preparation = styled('div', {
-  margin: '1rem',
+  marginTop: '1.5rem',
 
   h2: {
     marginBottom: '1rem',
