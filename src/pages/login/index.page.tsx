@@ -3,6 +3,8 @@ import logoDrulim from '../../assets/drulim_logo.png'
 
 import { LoginCard, LoginContainer } from './styles'
 import { useForm } from 'react-hook-form'
+import { useContext } from 'react'
+import { AuthContext } from '@/contexts/AuthContext'
 // import { AuthContext } from '../contexts/AuthContext';
 
 export default function LoginPage() {
@@ -10,14 +12,11 @@ export default function LoginPage() {
     shouldUseNativeValidation: true,
   })
 
-  function handleSignIn(data: any) {
-    console.log(data)
-  }
-  // const { signIn } = useContext(AuthContext)
+  const { signIn } = useContext(AuthContext)
 
-  // async function handleSignIn(data: any) {
-  //   await signIn(data)
-  // }
+  async function handleSignIn(data) {
+    await signIn(data)
+  }
 
   return (
     <LoginContainer>

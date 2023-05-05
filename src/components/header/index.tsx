@@ -8,10 +8,13 @@ import {
   SearchContainerMobile,
 } from './styles'
 
+import { AuthContext } from '../../contexts/AuthContext'
+
 import { BiSearchAlt } from 'react-icons/bi'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 
 export default function Header() {
+  const { user } = useContext(AuthContext)
   const [showSearchContainerMobile, setShowSearchContainerMobile] =
     useState(false)
 
@@ -42,12 +45,7 @@ export default function Header() {
         </button>
       </InputSearchContainer>
       <AvatarContainer>
-        <Image
-          src="https://github.com/lucas-mandai.png"
-          width={36}
-          height={36}
-          alt=""
-        ></Image>
+        <Image src={user?.avatar_url} width={36} height={36} alt=""></Image>
       </AvatarContainer>
     </HeaderContainer>
   )

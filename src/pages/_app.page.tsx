@@ -6,6 +6,8 @@ import { globalStyles } from '@/styles/global'
 import Header from '../components/header'
 import Footer from '@/components/footer'
 
+import { AuthProvider } from '../contexts/AuthContext'
+
 globalStyles()
 
 // Customizado
@@ -17,10 +19,12 @@ export default function App({ Component, pageProps }: MyAppProps) {
   const { isLoginPage } = pageProps
   return (
     <>
-      {/* Renderiza o header apenas se a página atual não for a de login */}
-      {!isLoginPage && <Header />}
-      <Component {...pageProps} />
-      {!isLoginPage && <Footer />}
+      <AuthProvider>
+        {/* Renderiza o header apenas se a página atual não for a de login */}
+        {!isLoginPage && <Header />}
+        <Component {...pageProps} />
+        {!isLoginPage && <Footer />}
+      </AuthProvider>
     </>
   )
 }
