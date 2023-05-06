@@ -32,8 +32,17 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper'
+import { AuthContext } from '@/contexts/AuthContext'
+import { useContext, useEffect } from 'react'
+import { api } from '@/services/api'
 
 export default function Home() {
+  // const { user } = useContext(AuthContext)
+
+  useEffect(() => {
+    api.get('/users')
+  }, [])
+
   return (
     <>
       <Head>

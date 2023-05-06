@@ -3,6 +3,7 @@ import { setCookie, parseCookies } from 'nookies'
 import Router from 'next/router'
 
 import { recoverUserInformation, signInRequest } from '../services/auth'
+import { api } from '@/services/api'
 // import { api } from '../services/api'
 
 type User = {
@@ -49,7 +50,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       maxAge: 60 * 60 * 1, // 1 hour
     })
 
-    // api.defaults.headers.Authorization = `Bearer ${token}`
+    api.defaults.headers.Authorization = `Bearer ${token}`
 
     setUser(user)
 
