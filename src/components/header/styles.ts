@@ -1,7 +1,7 @@
 import { styled } from '@/styles'
 
 export const HeaderContainer = styled('header', {
-  zIndex: '9999999',
+  zIndex: '2',
   width: '100%',
   position: 'fixed',
   display: 'flex',

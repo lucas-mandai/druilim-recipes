@@ -1,12 +1,16 @@
 // import { getCssText } from '@/styles'
 
 import type { AppProps } from 'next/app'
-
+import Router from 'next/router'
 import { globalStyles } from '@/styles/global'
 import Header from '../components/header'
 import Footer from '@/components/footer'
 
 import { AuthProvider } from '../contexts/AuthContext'
+
+import NProgress from 'nprogress'
+
+import 'nprogress/nprogress.css'
 
 globalStyles()
 
@@ -14,6 +18,14 @@ globalStyles()
 interface MyAppProps extends AppProps {
   isLoginPage: boolean
 }
+
+Router.events.on('routeChangeStart', (url) => {
+  console.log(`Loading: ${url}`)
+  NProgress.start()
+})
+
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 export default function App({ Component, pageProps }: MyAppProps) {
   const { isLoginPage } = pageProps
