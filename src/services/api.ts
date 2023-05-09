@@ -1,18 +1,18 @@
-import axios from 'axios'
-import { parseCookies } from 'nookies'
+// import axios from 'axios'
+// import { parseCookies } from 'nookies'
 
-const { 'drulimrecipes.token': token } = parseCookies()
+// const { 'drulimrecipes.token': token } = parseCookies()
 
-export const api = axios.create({
-  baseURL: 'https://localhost:3000',
-})
+// export const api = axios.create({
+//   baseURL: 'https://localhost:3000',
+// })
 
-api.interceptors.request.use((config) => {
-  console.log(config)
+// api.interceptors.request.use((config) => {
+//   console.log(config)
 
-  return config
-})
+//   return config
+// })
 
-if (token) {
-  api.defaults.headers.Authorization = `Bearer ${token}`
-}
+// if (token) {
+//   api.defaults.headers.Authorization = `Bearer ${token}`
+// }

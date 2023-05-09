@@ -3,7 +3,7 @@ import { setCookie, parseCookies } from 'nookies'
 import Router from 'next/router'
 
 import { recoverUserInformation, signInRequest } from '../services/auth'
-import { api } from '@/services/api'
+// import { api } from '@/services/api'
 // import { api } from '../services/api'
 
 type User = {
