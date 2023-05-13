@@ -134,7 +134,7 @@ export default function Home() {
         <HighlightsContainer>
           <div className="mainItem">
             <Link href="recipe">
-              <Image src={arrozBrocolis} alt="" placeholder="blur"></Image>
+              <Image fill src={arrozBrocolis} alt="" placeholder="blur"></Image>
 
               <span>Arroz com Brocolis</span>
             </Link>
